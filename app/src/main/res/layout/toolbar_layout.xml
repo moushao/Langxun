@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/toolbar_layout"
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:minHeight="48dp"
+             android:background="@color/actionsheet_blue"
+             android:fitsSystemWindows="false">
+
+    <ImageView
+        android:id="@+id/title_back"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:src="@drawable/icon_back"
+        android:visibility="gone"/>
+
+    <com.langbai.tdhd.widget.CircleImageView
+        android:id="@+id/head"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/login_head"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        />
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/toolbar_title_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/more"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColor="@color/white"
+        android:textSize="18dp"/>
+
+    <ImageView
+        android:id="@+id/image_more"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_gravity="right"
+        android:src="@drawable/icon_add"
+        android:visibility="gone"
+        />
+</FrameLayout>

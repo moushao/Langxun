@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_normal"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="25dp">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_info_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1"/>
+
+    <TextView
+        android:id="@+id/sex_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_button_pink"
+        android:drawableLeft="@drawable/video_icon"
+        android:drawablePadding="5dp"
+        android:padding="3dp"
+        android:text="28"
+        app:layout_constraintLeft_toLeftOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"/>
+
+    <com.langbai.tdhd.widget.CircleImageView
+        android:id="@+id/head"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="@+id/view"
+        app:layout_constraintRight_toRightOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="请求添加为好友"
+        app:layout_constraintBottom_toTopOf="@+id/agree"
+        app:layout_constraintLeft_toLeftOf="@+id/view"
+        app:layout_constraintRight_toRightOf="@+id/view"/>
+
+    <TextView
+        android:id="@+id/agree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_button_blue"
+        android:paddingBottom="3dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="3dp"
+        android:text="同意"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintLeft_toLeftOf="@+id/view"
+        app:layout_constraintRight_toRightOf="@+id/view"/>
+</android.support.constraint.ConstraintLayout>

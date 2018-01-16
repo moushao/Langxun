@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.langbai.tdhd"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="23"
+        />
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <!-- <uses-permission android:name="android.permission.INSTALL_PACKAGES"/> -->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 照相头权限 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <!-- 读写文件权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!-- 获取当前Activity -->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!-- 环信集成 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+
+    <application
+        android:name=".common.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/BaseAppTheme">
+        <meta-data
+            android:name="com.taobao.android.hotfix.IDSECRET"
+            android:value="24674285-1"/>
+        <meta-data
+            android:name="com.taobao.android.hotfix.APPSECRET"
+            android:value="e4cfca2102260b64497058a332d7717c"/>
+        <meta-data
+            android:name="com.taobao.android.hotfix.RSASECRET"
+            android:value="MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCW7ZzelgBg25OaxZ9daY205Z8fBepEQ2jS8pDqqzyWl97lwJ/dP1VHb8NErGqleRQfX34Ks+A0F7JPF+pPhk3hHC+IZbLq5JCFKT1V39Uta8NXi1+NXh2j1ebut/xhF8leFCwXXCUO9ejKKPBhuC5MnodkQ96EyXA0o4A0VZTfaEmmSTAb0izxYm8yYlWkgZjNTffFJVXa/vdYxCK5WYOeq+lT7v2GTjiw+ioECnbabiYPhBZGBIv3TPZIt0hm7dXKzMl5fcc/qjx+b6cW1saDps5y8AIBYFdCQUlikErw2v7d7qkmumrOxodRILZujxYMVM1nsUpzRaOMYgGBK5+fAgMBAAECggEAOnle0IIPLXeE7W7penh9tXtNNejFxaLURv5BlRm4xKOccSk7Bq4V7TJo1f9y5h9N44XMwHrGP4h6xdf/KMZg//k6lT7JneXl9CFxKQcqgYmByjYuVAgFtccWzKAtwLRFiRSJrJc/qFcv1Lsdvs5r6bV1wSvmV03wEgTSk/QgVJlrU8m2sN1kvb3Kek+EZGZkbfzDY5Idn/k77ZDH9ux5pcEGATBwIREhEiFaZAlKFPJTgUnhGpntRd9fkVpYDudbFzZxd14r+lgU4Scrxn5pieLcxkKI5y32fur7JdGcCydoWX71Vrrn+A/GRohPn0zNOE0953jhQrdF1NH1OI1MGQKBgQDTIVtNgZ2UHxnc6bMKGrtZuj+xuHSfCg/J2db9VDmc2PhNP7w5xZIMU5nNWOvOqt4QP+lpNhSOgBNRVu3Q84fnBvjbko+6lHZ0TVfsqJmvqulfW43qiSeO9OIVe79n2lagrBMCb3KiGUcphYqTJvg0s5lWXy/sXU989dAhPbvstQKBgQC3AO5ia4stgQEtJbBoOSNjdSowERdXCxm/CTfhg4dHnE6Tx21W9aoieKzPl8E+P6FCysLE+P/4yiAhshkP9A3smgLYdXouGLSm4KAP3xu01V5SIjqG7CEh8f23WMTKKCLq1XsTDbQZ8Uc0WpaMtEhS31YqeJUfGHd2AW8z2cnjgwKBgHUg/kwjak5waqK6LA+hAOsofomT8W8B3/x1k+X6wfOYEziX8U6DoyCfiKX5fOistoGBU3aBACqGNzFa7piLYovyvEDkMESsdILVHcA3UPu577ptSnAhIwcWKA8PFgMBiCmfDPS+63OuXmJUqao1ZmGmeZ0HNckFg0GqBYtLemQ5AoGBAJ97D0P0Bsk0CGto0fAyAzYUkBxteJKhmOFTzkAYWJc+j3fXruC+nHMICUmsLXrrBsTnYI85lBEjTJcw1wiBHnVXzi0HS9/KJfzb+oF6ZHHWFCmtrKWSOFmVww66LF0kVzGhs2zqX07QZsYoP9UE85ZNDZFbnlEICGttWpSsMnWzAoGAGAAxVYNozKaGQyy5UzI7JVRDLa6EBR3yB4+Q2HSUxv3pkZODHiZv30xMYkVxhePJIgW4i8ct1BvaD/1ygZdiT3gM0gz9prrp3kStH8Bg9jo2+yUFkantchpk+y/AhBQSdIvMPLa0kIC4Go/MFS5gotoDdjlB5IAeZBqMqmirmHY="/>
+
+        <!-- 以下集成为环信集成 -->
+        <!-- 设置环信应用的AppKey -->
+        <!-- android:name="1165170215178309#tdhd" 正式服key -->
+        <!-- android:value="1165170215178309#tdhdtest"  测试服key -->
+        <!-- android:value="1165170215178309#lxcapp"  浪讯key -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="1165170215178309#lxcapp"/>
+        <!-- 以上集成为环信集成 -->
+
+
+        <!-- compile 'com.github.LuckSiege.PictureSelector:picture_library:v2.1.1' 图片框架空指针处理 -->
+        <!--<provider-->
+        <!--android:name="android.support.v4.content.FileProvider"-->
+        <!--android:authorities="${applicationId}.provider"-->
+        <!--android:exported="false"-->
+        <!--android:grantUriPermissions="true">-->
+        <!--<meta-data-->
+        <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
+        <!--android:resource="@xml/file_paths"/>-->
+        <!--</provider>-->
+        <!-- compile 'com.github.LuckSiege.PictureSelector:picture_library:v2.1.1' 图片框架空指针处理 -->
+        <service android:name=".utils.appupdate.AppUpdateService"/>
+
+        <activity
+            android:name=".activity.GuideActivity"
+            android:theme="@style/normal_them">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.InfoActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.EditActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.SettingActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.FeedbackActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.MyQrCodeActivity"
+            android:theme="@style/normal_them">
+        </activity>
+   
+        <activity
+            android:name=".activity.ClassSettingActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.NoviceGuidanceActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.QuestionActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.QuestionDetailAcitivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.AboutUsActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.GroupCreateActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+        </activity>
+        <activity
+            android:name=".activity.MeetingJoinActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.MeetingCreateActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.FindPasswordActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.NavigationActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.ChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name=".activity.SearchActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.NewFriendsActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.OtherLoginActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.AddFriendActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.GroupListActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.PickUserActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.GroupDetailsActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.FriendsInfoActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.PickGroupActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <!-- 显示下载大图页面 -->
+        <activity
+            android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"/>
+
+        <!-- 播放视频 -->
+        <activity
+            android:name="com.hyphenate.easeui.ui.EaseShowVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!-- choose video -->
+        <activity
+            android:name=".activity.ImageGridActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".activity.RecorderVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/normal_them"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".activity.CircleActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activity.MyCircleActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activity.CircleReleaseActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.SquareReleaseActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.SquareActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.MySquareActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.ReportTypeActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.SquareDetailsActivity"
+            android:theme="@style/normal_them"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name=".activity.FriendsSettingActivity"
+            android:theme="@style/normal_them">
+        </activity>
+        <activity
+            android:name=".activity.SmallCaptureActivity"
+            android:theme="@style/normal_them"
+            />
+    </application>
+
+</manifest>

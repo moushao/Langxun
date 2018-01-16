@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.langbai.tdhd.activity.NewFriendsActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_layout"
+        />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:background="@color/back_normal"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="好友通知"
+        android:textSize="14sp"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/request_rcyc"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:visibility="gone"
+        android:background="@color/white">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/no_request_tv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="6"
+        android:gravity="center"
+        android:text="当前没有新朋友到访"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/groom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        android:layout_weight="4"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="好友推荐"
+            />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:layout_weight="1">
+
+            <com.langbai.tdhd.widget.CircleImageView
+                android:id="@+id/groom_head"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/groom_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/groom_head"
+                android:text="123"
+                android:textSize="15sp"
+                app:layout_constraintTop_toTopOf="@+id/groom_head"
+                app:layout_constraintLeft_toRightOf="@+id/groom_head"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:id="@+id/groom_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/groom_head"
+                android:text="四川成都"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/groom_name"
+                app:layout_constraintLeft_toRightOf="@+id/groom_head"
+                android:layout_marginLeft="10dp"/>
+            
+            <TextView
+                android:id="@+id/add"
+                android:text="添加"
+                android:textSize="17sp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/text_color"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="25dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"
+                android:background="@drawable/shape_add_gray"
+                app:layout_constraintRight_toRightOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/groom_rcyc"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/white">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+
+</LinearLayout>

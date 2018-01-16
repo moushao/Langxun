@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/constraintLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_normal"
+    tools:context="com.langbai.tdhd.activity.QuestionActivity">
+
+    <include
+        android:id="@+id/toolbar_layout"
+        layout="@layout/toolbar_layout"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="0dp"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_info_white"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:layout_constraintLeft_toLeftOf="@+id/toolbar_layout"
+        app:layout_constraintRight_toRightOf="@+id/toolbar_layout"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_layout">
+
+        <TextView
+            android:id="@+id/how_to_change_password"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:drawableRight="@drawable/icon_more"
+            android:gravity="center_vertical"
+            android:text="1. app怎么修改密码"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#B1B1B1"/>
+
+        <TextView
+            android:id="@+id/how_to_start_meeting"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:drawableRight="@drawable/icon_more"
+            android:gravity="center_vertical"
+            android:text="2. 怎么发起会议"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#B1B1B1"/>
+
+        <TextView
+            android:id="@+id/how_to_join_meeting"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:drawableRight="@drawable/icon_more"
+            android:gravity="center_vertical"
+            android:text="3. 怎么进入会议"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#B1B1B1"/>
+
+        <TextView
+            android:id="@+id/why_cannot_see_chat_history"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:drawableRight="@drawable/icon_more"
+            android:gravity="center_vertical"
+            android:text="4. 为什么看不到之前的聊天记录"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#B1B1B1"/>
+
+        <TextView
+            android:id="@+id/star_meeting_failed"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:drawableRight="@drawable/icon_more"
+            android:gravity="center_vertical"
+            android:text="5 为什么发起会议失败"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#B1B1B1"/>
+
+        <TextView
+            android:id="@+id/cannot_handle_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/icon_more"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="3dp"
+            android:minHeight="48dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="6 为什么不能创建群组，邀请人进入群组?"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#B1B1B1"/>
+
+        <TextView
+            android:id="@+id/cannot_handle_metting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/icon_more"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="3dp"
+            android:minHeight="48dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="7.为什么不能创建会议，加入会议?"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"/>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

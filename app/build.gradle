@@ -1,0 +1,109 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.langbai.tdhd"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 3
+        versionName "2.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi-v7a'//'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+    }
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //为了解决部分第三方库重复打包了META-INF的问题
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    //分包设置大小
+    dexOptions {
+        //ncremental true
+        jumboMode = true
+        javaMaxHeapSize "4g"
+    }
+    //[MissingTranslation]:打包的时候不需要检查String文件中是否有翻译
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    //Android Studio不会在apk打包时自动加入.so库文件,所以声明,用于环信地图
+    sourceSets {
+        main() {
+            jniLibs.srcDirs = ['libs']
+            jniLibs.srcDirs = ['src/main/libs']
+            jni.srcDirs = []
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':statusbarlibrary')
+    compile project(':refresh-layout')
+    compile project(':easeui')
+    compile project(':picture_library')
+    configurations.all {
+        resolutionStrategy.force 'com.android.support:support-annotations:23.1.0'
+    }
+    compile('com.alibaba.android:vlayout:1.2.2@aar') {
+        transitive = true
+    }
+    //    compile 'org.apmem.tools:layouts:1.10@aar'
+    //      compile 'com.github.razerdp:PhotoContents:v1.4.2'
+    //over scroller helper
+    //    compile 'cn.jzvd:jiaozivideoplayer:6.1.0_preview'
+    compile 'com.android.support:appcompat-v7:26.0'
+    compile 'com.android.support:design:26.0.0-alpha1'
+    compile 'com.android.support:multidex:1.0.2'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.1.2'
+    compile 'com.jakewharton:disklrucache:2.0.2'
+    compile 'com.github.pinguo-zhouwei:CustomPopwindow:2.1.1'
+    compile 'com.contrarywind:Android-PickerView:3.2.6'
+    //compile 'com.github.LuckSiege.PictureSelector:picture_library:v2.1.1'
+    //compile 'com.google.zxing:core:3.3.0'
+    //compile 'cn.bingoogolapple:bga-qrcodecore:1.1.8@aar'
+    //compile 'cn.bingoogolapple:bga-zxing:1.1.8@aar'
+    //compile 'cn.yipianfengye.android:zxing-library:2.2'
+    compile 'com.github.zcweng:switch-button:0.0.3@aar'
+    compile 'com.github.ybq:Android-SpinKit:1.0.5'
+    compile 'com.github.nanchen2251:CompressHelper:1.0.5'
+    compile 'com.j256.ormlite:ormlite-android:5.0'
+    compile 'com.parse:parse-android:1.15.7'
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    compile 'com.liulishuo.filedownloader:library:1.6.8'
+    compile 'me.everything:overscroll-decor-android:1.0.3'
+    compile 'com.github.razerdp:BasePopup:1.8.2'
+    compile 'org.apmem.tools:layouts:1.10@aar'
+    compile 'com.aliyun.ams:alicloud-android-hotfix:3.1.5'
+    compile 'com.youth.banner:banner:1.4.9'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.1.1'
+    implementation project(':zxing-android-embedded')
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    compile 'com.danikula:videocache:2.7.0'
+}

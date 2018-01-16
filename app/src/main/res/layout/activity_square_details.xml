@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.langbai.tdhd.activity.SquareDetailsActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_layout"
+        />
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/pic_faith"
+        android:visibility="gone"
+        >
+    </com.youth.banner.Banner>
+
+    <cn.jzvd.JZVideoPlayerStandard
+        android:id="@+id/player"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:src="@drawable/pic_faith"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <com.langbai.tdhd.widget.CircleImageView
+                    android:id="@+id/head_detail"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/login_head"
+                    />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/head_detail"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/head_detail"
+                    android:text="姓名"/>
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/head_detail"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/head_detail"
+                    android:text="11月6日 09:23"/>
+
+                <TextView
+                    android:id="@+id/thumb_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:text="赞 "/>
+
+                <TextView
+                    android:id="@+id/comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@id/thumb_up"
+                    android:text="评论 "/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:visibility="gone"/>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                app:tabIndicatorColor="#3eb0ff"
+                app:tabIndicatorHeight="2dp"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="#3eb0ff"
+                app:tabTextColor="#7a8699"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyc"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+        <com.langbai.tdhd.circle.commentwidget.CommentBox
+            android:id="@+id/widget_comment"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+</LinearLayout>

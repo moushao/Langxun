@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="VerificationCodeView">
+        <attr name="isNetCode" format="boolean"/>
+        <attr name="codeNumber" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="ExpandableLayout">
+        <attr name="el_duration" format="integer"/>
+        <attr name="el_expanded" format="boolean"/>
+        <attr name="el_parallax" format="float"/>
+        <!-- {@deprecated Use el_parallax instead.} -->
+        <attr name="el_translate_children" format="boolean"/>
+        <attr name="layout_expandable" format="boolean"/>
+        <attr name="android:orientation"/>
+    </declare-styleable>
+    <declare-styleable name="RippleView">
+        <attr name="rippleColor" format="color"/>
+        <attr name="alphaFactor" format="float"/>
+        <attr name="hover" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="ContactItemView">
+        <attr name="contactItemImage" format="reference"/>
+        <attr name="contactItemName" format="string"/>
+    </declare-styleable>
+    <!--显示点赞控件-->
+    <declare-styleable name="PraiseWidget">
+        <attr name="click_bg_color"
+              format="color"/>
+        <attr name="font_color"
+              format="color"/>
+        <attr name="font_size"
+              format="dimension"/>
+        <attr name="like_icon"
+              format="reference"/>
+    </declare-styleable>
+    <!--ForceClickImageView-->
+    <declare-styleable name="ForceClickImageView">
+        <attr name="foregroundColor" format="reference|color"/>
+    </declare-styleable>
+</resources>

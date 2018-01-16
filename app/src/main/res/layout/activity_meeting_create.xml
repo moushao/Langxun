@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E7E7E7"
+    tools:context="com.langbai.tdhd.activity.GroupCreateActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_layout"
+        />
+
+    <EditText
+        android:id="@+id/meeting_name"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_info_white_5dp"
+        android:hint="会议名称"
+        android:maxLength="15"
+        android:paddingLeft="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+    <EditText
+        android:id="@+id/person"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_info_white_5dp"
+        android:maxLength="10"
+        android:paddingLeft="10dp"
+        android:paddingVertical="3dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meeting_name"/>
+
+    <EditText
+        android:id="@+id/meeting_brief"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/shape_info_white_5dp"
+        android:gravity="start"
+        android:hint="会议描述"
+        android:maxLength="50"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingVertical="3dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/person"/>
+
+    <TextView
+        android:id="@+id/select_friends"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_info_white_5dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="邀请好友"
+        android:textColor="@color/text_color"
+        android:textSize="15sp"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_group"/>
+
+    <TextView
+        android:id="@+id/has_select_friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:focusable="false"
+        android:textColor="@color/text_color"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/select_friends"
+        app:layout_constraintRight_toRightOf="@+id/select_friends"
+        app:layout_constraintTop_toTopOf="@+id/select_friends"/>
+
+    <TextView
+        android:id="@+id/select_group"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_info_white_5dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="选择群"
+        android:textColor="@color/text_color"
+        android:textSize="15sp"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meeting_brief"/>
+
+    <TextView
+        android:id="@+id/has_select_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:focusable="false"
+        android:textColor="@color/text_color"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/select_group"
+        app:layout_constraintRight_toRightOf="@+id/select_group"
+        app:layout_constraintTop_toTopOf="@+id/select_group"/>
+
+</android.support.constraint.ConstraintLayout>

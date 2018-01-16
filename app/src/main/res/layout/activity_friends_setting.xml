@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_normal"
+    tools:context="com.langbai.tdhd.activity.FriendsSettingActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_layout"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_white_bg"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="不让他看我的朋友圈"
+                android:textColor="@color/text_black"
+                android:textSize="14sp"/>
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/switch_my"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20dp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignBottom="@id/switch_btn"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="不看他的朋友圈"
+                android:textColor="@color/text_black"
+                android:textSize="14sp"/>
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/switch_he"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/delete_friend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_white_selector"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="删除好友"
+        android:textColor="@color/selectColor"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/wall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pic_personal_bg"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.langbai.tdhd.widget.CircleImageView
+                android:id="@+id/head"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/login_head"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/brief"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:maxLines="2"
+                android:maxWidth="200dp"
+                android:text="这个人很懒,什么都没留下"
+                android:textColor="@color/white"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="34dp"
+            android:src="@drawable/icon_qr_code"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/selector_personal_item"
+        android:drawableLeft="@drawable/icon_person_un"
+        android:drawablePadding="20dp"
+        android:drawableRight="@drawable/icon_more"
+        android:gravity="center_vertical"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:text="个人信息"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/album"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/selector_personal_item"
+        android:drawableLeft="@drawable/icon_album"
+        android:drawablePadding="20dp"
+        android:drawableRight="@drawable/icon_more"
+        android:gravity="center_vertical"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:text="我的相册"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/square"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/selector_personal_item"
+        android:drawableLeft="@drawable/icon_square"
+        android:drawablePadding="20dp"
+        android:drawableRight="@drawable/icon_more"
+        android:gravity="center_vertical"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:text="我的广场"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/setting"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/selector_personal_item"
+        android:drawableLeft="@drawable/icon_set"
+        android:drawablePadding="20dp"
+        android:drawableRight="@drawable/icon_more"
+        android:gravity="center_vertical"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:text="设置"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/quit"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/selector_personal_item"
+        android:drawableLeft="@drawable/icon_quit"
+        android:drawablePadding="20dp"
+        android:drawableRight="@drawable/icon_more"
+        android:gravity="center_vertical"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:text="退出登录"
+        android:textColor="@color/black"/>
+
+
+</LinearLayout>

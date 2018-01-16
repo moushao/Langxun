@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/lLayout_bg"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#00000000"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            android:src="@drawable/upapk_buttom"
+            />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="发现新版本"
+            android:textColor="#3EB0FF"
+            android:textSize="24dp"/>
+
+        <TextView
+            android:id="@+id/message_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="43.5dp"
+            android:text="检测到当前应用有新版本"
+            android:textSize="13dp"/>
+
+        <TextView
+            android:id="@+id/message_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="63dp"
+            android:text="请下载更新"
+            android:textSize="13dp"/>
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="200dp"
+            android:layout_height="38dp"
+            android:layout_gravity="bottom|center"
+            android:background="@drawable/normal_background"
+            android:layout_marginBottom="20dp"
+            android:text="立即更新"
+            android:textColor="@color/white"
+            android:textSize="17dp"/>
+
+        <ImageView
+            android:id="@+id/close_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="46dp"
+            android:visibility="gone"/>
+    </FrameLayout>
+</LinearLayout>

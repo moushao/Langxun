@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7f7f7"
+    android:orientation="vertical"
+    tools:context="com.langbai.tdhd.activity.SettingActivity">
+
+    <include
+        layout="@layout/toolbar_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_info_white"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+
+        <TextView
+            android:id="@+id/sky_class"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:drawableRight="@drawable/icon_more"
+            android:gravity="center_vertical"
+            android:text="消息设置"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"
+            />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#B1B1B1"
+            />
+
+        <TextView
+            android:id="@+id/new_guide"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:drawableRight="@drawable/icon_more"
+            android:gravity="center_vertical"
+            android:text="新手引导"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#B1B1B1"/>
+
+        <TextView
+            android:id="@+id/always_question"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:drawableRight="@drawable/icon_more"
+            android:gravity="center_vertical"
+            android:text="常见问题"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#B1B1B1"/>
+
+        <TextView
+            android:id="@+id/about_us"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:drawableRight="@drawable/icon_more"
+            android:gravity="center_vertical"
+            android:text="关于我们"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#B1B1B1"/>
+
+        <TextView
+            android:id="@+id/feed_back"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:drawableRight="@drawable/icon_more"
+            android:gravity="center_vertical"
+            android:text="我要吐槽"
+            android:textColor="@color/text_color"
+            android:textSize="17sp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

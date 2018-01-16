@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout"/>
+
+    <FrameLayout
+        android:id="@+id/age_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        >
+
+        <EditText
+            android:id="@+id/age"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="年龄范围18-65周岁"
+            android:inputType="number"
+            android:maxLength="2"
+            android:paddingLeft="15dp"
+            android:textColor="@color/text_color"/>
+
+        <ImageView
+            android:id="@+id/clean"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/icon_clean"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/brife_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_info_white"
+        android:visibility="gone"
+        >
+
+
+        <EditText
+            android:id="@+id/brife"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@null"
+            android:drawablePadding="10dp"
+            android:gravity="start"
+            android:maxLength="30"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:textColor="@color/text_color"/>
+
+        <TextView
+            android:id="@+id/totalNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:text="0/30"/>
+
+    </FrameLayout>
+
+</LinearLayout>
